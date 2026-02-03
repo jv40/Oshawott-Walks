@@ -15,7 +15,7 @@ size = Vector2(20, 88)
 size = Vector2(480, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
-size = Vector2(78.5, 212.5)
+size = Vector2(78.5, 196)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
 size = Vector2(212, 122)
@@ -30,7 +30,7 @@ size = Vector2(68, 81)
 size = Vector2(20, 110)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eb6dy"]
-size = Vector2(35.25, 45.125)
+size = Vector2(35.25, 35.5625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trceg"]
 size = Vector2(27, 75)
@@ -55,6 +55,10 @@ position = Vector2(118, 161)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2.5, 2.5)
+limit_left = -580
+limit_top = -330
+limit_right = 1390
+limit_bottom = 770
 position_smoothing_enabled = true
 
 [node name="Button" type="Button" parent="."]
@@ -138,7 +142,7 @@ shape = SubResource("RectangleShape2D_o6xl0")
 position = Vector2(676, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider13"]
-position = Vector2(-122, 78.25)
+position = Vector2(-122, 78)
 shape = SubResource("RectangleShape2D_o6xl0")
 
 [node name="Map Collider7" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
@@ -288,6 +292,13 @@ position = Vector2(178, 329)
 position = Vector2(614, -220)
 shape = SubResource("RectangleShape2D_eb6dy")
 
+[node name="Map Collider47" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider47"]
+position = Vector2(-669, -116)
+shape = SubResource("RectangleShape2D_eb6dy")
+
 [node name="Map Collider41" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
 position = Vector2(178, 329)
 
@@ -299,7 +310,7 @@ shape = SubResource("RectangleShape2D_eb6dy")
 position = Vector2(178, 329)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider35"]
-position = Vector2(-23, 136)
+position = Vector2(-23, 131.219)
 shape = SubResource("RectangleShape2D_eb6dy")
 
 [node name="Map Collider32" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
