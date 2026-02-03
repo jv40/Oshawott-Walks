@@ -1,8 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgbubdvu1ot8t"]
+[gd_scene load_steps=19 format=3 uid="uid://cgbubdvu1ot8t"]
 
 [ext_resource type="PackedScene" uid="uid://dwl7nsh3lhvbl" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://drgmone50vunm" path="res://scripts/button.gd" id="2_sugp2"]
 [ext_resource type="Texture2D" uid="uid://djgo1sc0vgtwj" path="res://assets/Pokemon Mystery Dungeon Sprite Edit Map.png" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cg5oeievb2xlp" path="res://scenes/map_collider.tscn" id="4_jyhfs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
+size = Vector2(21, 214)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
+size = Vector2(20, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
+size = Vector2(480, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
+size = Vector2(78.5, 212.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
+size = Vector2(212, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85g3d"]
+size = Vector2(110, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_choun"]
+size = Vector2(68, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya4ey"]
+size = Vector2(20, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb6dy"]
+size = Vector2(35.25, 45.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trceg"]
+size = Vector2(27, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8y0u"]
+size = Vector2(94, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkv2x"]
+size = Vector2(176, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbj1t"]
+size = Vector2(2096, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muem4"]
+size = Vector2(36, 1254)
 
 [node name="Main" type="Node2D"]
 
@@ -29,5 +72,343 @@ scale = Vector2(1.39837, 1.39837)
 texture = ExtResource("3_sugp2")
 
 [node name="Map Colliders" type="Node" parent="."]
+
+[node name="Map Collider21" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-24, 468)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider21"]
+polygon = PackedVector2Array(-57, -44, -56, 46, -36, 52, 32, 53, 53, 46, 53, -44)
+
+[node name="Map Collider17" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-102, -20)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider17"]
+polygon = PackedVector2Array(-42, 114, 49, 114, 59, 105, 59, 53, 95, 37, 95, 12, 83, 6, 83, -54, 96, -54, 96, -120, -98, -118, -90, 37, -53, 52, -53, 105)
+
+[node name="Map Collider" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(232, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider"]
+position = Vector2(-17.5, -37)
+shape = SubResource("RectangleShape2D_tbgi4")
+
+[node name="Map Collider2" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(26, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider2"]
+position = Vector2(4, 11)
+shape = SubResource("RectangleShape2D_tefeu")
+
+[node name="Map Collider3" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(282, -144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider3"]
+position = Vector2(146, -90)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="Map Collider4" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(282, -144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider4"]
+position = Vector2(-491, -92)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="Map Collider5" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(282, -144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider5"]
+position = Vector2(-970, -91)
+shape = SubResource("RectangleShape2D_jyhfs")
+
+[node name="Map Collider6" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(676, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider6"]
+position = Vector2(14, -63)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="Map Collider19" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(676, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider19"]
+position = Vector2(14, -194)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="Map Collider13" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(676, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider13"]
+position = Vector2(-122, 78.25)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="Map Collider7" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(370, 644)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider7"]
+polygon = PackedVector2Array(-40, 139, -40, -162, 143, -162, 144, -456, 224, -456, 223, -80, 37, -79, 41, 140)
+
+[node name="Map Collider8" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(241, 548)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider8"]
+polygon = PackedVector2Array(-54, -168, -49, 155, -542, 150, -620, 234, -671, 235, -727, 164, -727, -234, -715, -239, -715, -284, -781, -358, -854, -358, -864, 255, 56, 251, 55, -167)
+
+[node name="Map Collider9" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-358, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider9"]
+position = Vector2(36, -5)
+shape = SubResource("RectangleShape2D_tipki")
+
+[node name="Map Collider10" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-358, 250)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider10"]
+position = Vector2(247, -5)
+shape = SubResource("RectangleShape2D_tipki")
+
+[node name="Map Collider11" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(1055, 625)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider11"]
+polygon = PackedVector2Array(-648, -58, -645, 155, -761, 153, -759, 215, 338, 215, 333, -970, -328, -971, -327, -663, 296, -667, 192, -567, 201, -372, 144, -315, 146, -224, 104, -184, 54, -212, 46, -316, -74, -317, -78, -437, -464, -437, -464, -66)
+
+[node name="Map Collider12" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(672, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider12"]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_85g3d")
+
+[node name="Map Collider14" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(672, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider14"]
+position = Vector2(-826, 358)
+shape = SubResource("RectangleShape2D_85g3d")
+
+[node name="Map Collider37" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(672, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider37"]
+position = Vector2(-462, -357)
+shape = SubResource("RectangleShape2D_85g3d")
+
+[node name="Map Collider38" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(672, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider38"]
+position = Vector2(-661, -353)
+shape = SubResource("RectangleShape2D_85g3d")
+
+[node name="Map Collider23" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(672, 61)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider23"]
+position = Vector2(-1045, 304)
+shape = SubResource("RectangleShape2D_85g3d")
+
+[node name="Map Collider15" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-16, 488)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider15"]
+polygon = PackedVector2Array(-77, 21, -77, 48, -39, 47, -39, 88, -183, 89, -183, 21)
+
+[node name="Map Collider16" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-548, -30)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider16"]
+polygon = PackedVector2Array(-68, 158, 172, 157, 170, 75, 303, 73, 301, -11, 344, -11, 345, 46, 332, 46, 332, 129, 370, 129, 370, 96, 344, 96, 344, 80, 356, 81, 357, -43, 369, -43, 369, -75, 352, -75, 351, -134, -68, -136)
+
+[node name="Map Collider18" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(334, -5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider18"]
+polygon = PackedVector2Array(76, -82, 76, -110, 131, -150, 193, -101, 193, -64, 143, -32, 95, -31, 95, 48, 126, 48, 127, 118, 41, 116, 30, 124, -37, 124, -46, 117, -107, 117, -108, -62, -64, -83, 68, -83)
+
+[node name="Map Collider20" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(621, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider20"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_choun")
+
+[node name="Map Collider22" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-22, 357)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider22"]
+polygon = PackedVector2Array(16, 54, 28, 54, 28, 35, 64, 35, 64, -14, 89, -14, 89, -39, -188, -39, -187, 9, -71, 34, -33, 35, -33, 54, -21, 54, -21, 10, -46, 10, -46, -14, 41, -14, 41, 10, 16, 10)
+
+[node name="Map Collider24" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(155, 357)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider24"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_ya4ey")
+
+[node name="Map Collider27" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(155, 357)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider27"]
+position = Vector2(84, -56)
+shape = SubResource("RectangleShape2D_ya4ey")
+
+[node name="Map Collider25" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(155, 357)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider25"]
+position = Vector2(-89, 112)
+shape = SubResource("RectangleShape2D_ya4ey")
+
+[node name="Map Collider26" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(155, 357)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider26"]
+position = Vector2(-89, 163)
+shape = SubResource("RectangleShape2D_ya4ey")
+
+[node name="Map Collider28" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider28"]
+position = Vector2(1, -2.875)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="Map Collider29" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider29"]
+position = Vector2(209, 47)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="Map Collider30" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider30"]
+position = Vector2(614, -220)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="Map Collider41" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider41"]
+position = Vector2(-18, -548)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="Map Collider35" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider35"]
+position = Vector2(-23, 136)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="Map Collider32" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(178, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider32"]
+position = Vector2(-547, 214)
+shape = SubResource("RectangleShape2D_eb6dy")
+
+[node name="Map Collider31" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(422, 351)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider31"]
+polygon = PackedVector2Array(-127, -46, 6, 114, 92, 115, 90, 39, 36, -54, -7, -55, -53, -115, 17, -118, 16, -153, -185, -156, -185, -118, -91, -117, -129, -74)
+
+[node name="Map Collider33" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-287, 465)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider33"]
+polygon = PackedVector2Array(-67, -47, -65, 55, 35, 52, 79, 14, 80, -44, 25, -98, 58, -98, 57, -138, -72, -139)
+
+[node name="Map Collider34" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(54, 376)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider34"]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_trceg")
+
+[node name="Map Collider36" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(54, 376)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider36"]
+position = Vector2(163, -88)
+shape = SubResource("RectangleShape2D_trceg")
+
+[node name="Map Collider39" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(865, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider39"]
+polygon = PackedVector2Array(-48, 65, -89, 18, -46, -65, 47, -67, 91, 19, 47, 64)
+
+[node name="Map Collider40" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(1113, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider40"]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_a8y0u")
+
+[node name="Map Collider42" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-333, 655)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider42"]
+position = Vector2(-1, -3)
+shape = SubResource("RectangleShape2D_jkv2x")
+
+[node name="Map Collider43" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-333, 655)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider43"]
+position = Vector2(257, 24.5)
+shape = SubResource("RectangleShape2D_jkv2x")
+
+[node name="Map Collider44" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-333, 655)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map Colliders/Map Collider44"]
+position = Vector2(353, 24.5)
+shape = SubResource("RectangleShape2D_jkv2x")
+
+[node name="Map Collider45" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(28, 563)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider45"]
+polygon = PackedVector2Array(-21, 14, 27, 14, 26, -23, -22, -23)
+
+[node name="Map Collider46" parent="Map Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-410, 756)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map Colliders/Map Collider46"]
+polygon = PackedVector2Array(-22, 32, 28, 31, 28, -1, 0, -38, -24, -39)
+
+[node name="World Colliders" type="Node" parent="."]
+
+[node name="Map Collider" parent="World Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(342, 916)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Colliders/Map Collider"]
+position = Vector2(33, -102)
+shape = SubResource("RectangleShape2D_jbj1t")
+
+[node name="Map Collider2" parent="World Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(342, 916)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Colliders/Map Collider2"]
+position = Vector2(46, -1227)
+shape = SubResource("RectangleShape2D_jbj1t")
+
+[node name="Map Collider3" parent="World Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-695, 225)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Colliders/Map Collider3"]
+position = Vector2(104, 18)
+shape = SubResource("RectangleShape2D_muem4")
+
+[node name="Map Collider4" parent="World Colliders" instance=ExtResource("4_jyhfs")]
+position = Vector2(-695, 225)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Colliders/Map Collider4"]
+position = Vector2(2056, -19)
+shape = SubResource("RectangleShape2D_muem4")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
