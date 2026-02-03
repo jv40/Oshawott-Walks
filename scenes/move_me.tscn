@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bryc8m7wf5vjf"]
+
+[ext_resource type="Texture2D" uid="uid://d4cdap5g20rcv" path="res://assets/icon.svg" id="1_f5w33"]
+[ext_resource type="Script" uid="uid://coxxywtaxwlm0" path="res://scripts/move_me.gd" id="1_s4vgw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hfb8"]
+size = Vector2(126, 122)
+
+[node name="MoveMe" type="CharacterBody2D"]
+script = ExtResource("1_s4vgw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.35359, 0.863605, 7.70092e-07, 1)
+texture = ExtResource("1_f5w33")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_5hfb8")
