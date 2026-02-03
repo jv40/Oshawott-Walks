@@ -1,3 +1,6 @@
+#Oshawott Spritesheet from Wolfang62 on DeviantArt
+#Pokemon Mystery Dungeon Sprite Edit Map by u/SamanthaHellmaniac on Reddit
+
 extends CharacterBody2D
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
